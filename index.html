@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find internships and manage your applications with InternTrack.">
+  <title>InternTrack | Internship Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">Intern<span>Track</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#internships">Explore</a>
+      <a href="#applications">My Applications</a>
+      <a href="#profile">My Profile</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR CAREER STARTS HERE</p>
+      <h1>Find your next <span>opportunity.</span></h1>
+      <p>Discover internships, track applications, and stay
+        one step ahead of every deadline.</p>
+      <a href="#internships" class="primary-btn">Explore internships →</a>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card">
+        <p>Available internships</p>
+        <h2 id="totalCount">0</h2>
+      </article>
+      <article class="stat-card">
+        <p>Applications tracked</p>
+        <h2 id="appliedCount">0</h2>
+      </article>
+      <article class="stat-card">
+        <p>Upcoming deadlines</p>
+        <h2 id="deadlineCount">0</h2>
+      </article>
+    </section>
+
+    <section id="internships" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DISCOVER</p>
+          <h2>Explore internships</h2>
+          <p>Find opportunities that match your interests.</p>
+        </div>
+      </div>
+
+      <div class="filters">
+        <input id="searchInput" type="search"
+          placeholder="Search role, company, or skill..."
+          aria-label="Search internships">
+
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="all">All categories</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+          <option value="Data Science">Data Science</option>
+          <option value="Testing">Testing</option>
+        </select>
+
+        <select id="modeFilter" aria-label="Filter by work mode">
+          <option value="all">All work modes</option>
+          <option value="Remote">Remote</option>
+          <option value="Hybrid">Hybrid</option>
+          <option value="On-site">On-site</option>
+        </select>
+      </div>
+
+      <div id="internshipList" class="internship-grid"></div>
+      <p id="emptyMessage" class="empty-message" hidden>
+        No matching internships. Try another search.
+      </p>
+    </section>
+
+    <section id="applications" class="section">
+      <p class="eyebrow">STAY ORGANIZED</p>
+      <h2>My applications</h2>
+      <p>Update the status of each opportunity you are tracking.</p>
+      <div id="applicationList"></div>
+    </section>
+
+    <section id="profile" class="section profile-section">
+      <p class="eyebrow">YOUR CAREER PROFILE</p>
+      <h2>My resume and portfolio</h2>
+      <p>Save your links to access them whenever you need them.</p>
+
+      <form id="profileForm" class="profile-form">
+        <label for="resumeUrl">Resume link</label>
+        <input id="resumeUrl" type="url"
+          placeholder="https://example.com/my-resume.pdf">
+
+        <label for="portfolioUrl">Portfolio link</label>
+        <input id="portfolioUrl" type="url"
+          placeholder="https://yourportfolio.example">
+
+        <button class="primary-btn" type="submit">Save profile links</button>
+        <p id="profileMessage" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>InternTrack © 2026 · Your journey, organized.</p>
+  </footer>
+</body>
+</html>
